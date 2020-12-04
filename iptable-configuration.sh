@@ -26,15 +26,16 @@ echo "GNU General Public License for more details."
 ###################################
 #  Installation des dépendances pour ddos-deflate
 ###################################
+apt install iptables-persistent -y
 
 echo "##################"
 echo "Installation es dépendances pour ddos-deflate"
 echo "##################"
-apt install dnsutils
-apt-get install net-tools
-apt-get install tcpdump
-apt-get install dsniff -y
-apt install grepcidr
+apt install dnsutils -y
+apt install net-tools -y
+apt install tcpdump -y
+apt install dsniff -y
+apt install grepcidr -y
 
 echo "##################"
 echo "Installation de ddos-deflate depuis https://github.com/jgmdev/"
@@ -203,7 +204,6 @@ echo "##################"
 echo "##################"
 echo "La configuration est terminé, si vous avez un soucis ouvrez un ticket sur le git du projet https://github.com/Ghost-devlopper/DDOSProtection/issues"
 echo "##################"
-apt-get install iptables-persistent
 iptables-save > /etc/iptables/rules.v4
 systemctl restart rsyslog
 echo ""
